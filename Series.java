@@ -14,7 +14,7 @@ public class Series {
             sum=sum+i;
            
         }
-        System.out.println("");
+        System.out.println();
         System.out.println("sum = " + sum);
         
     }

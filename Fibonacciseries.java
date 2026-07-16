@@ -1,37 +1,26 @@
-package prime.numbers.from.m.to.n;
+package javaprograms;
 
 import java.util.Scanner;
 
 public class Fibonacciseries {
-
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of terms: ");
+        int n = sc.nextInt();
 
-        int m, n, count = 0;
+        int first = 0, second = 1;
 
-        System.out.print("Enter initial number : ");
-        m = input.nextInt();
+        System.out.println("Fibonacci Series:");
 
-        System.out.print("Enter ending number : ");
-        n = input.nextInt();
+        for (int i = 0; i < n; i++) {
+            System.out.print(first + " ");
 
-        for (int i = m; i <= n; i++) {
-
-            count = 0;
-
-            for (int j = 2; j < i - 1; j++) {
-                if (i % j == 0) {
-                    count++;
-                    break;
-                }
-            }
-
-            if (count == 0 && i > 1) {
-                System.out.println(i);
-            }
+            int next = first + second;
+            first = second;
+            second = next;
         }
 
-        input.close();
+        sc.close();
     }
 }

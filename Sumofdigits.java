@@ -1,4 +1,4 @@
-package assignment.pkg13;
+package sumofdigits;
 
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class Sumofdigits {
             temp = temp / 10;
         }
 
-        System.out.println(sum);
+        System.out.println("Sum of digits = " + sum);
 
         input.close();
     }

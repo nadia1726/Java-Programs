@@ -1,26 +1,22 @@
-package reverse.a.number;
-
+package reversenumber;
 import java.util.Scanner;
-
-public class ReverseANumber {
-
+public class ReverseNumber {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int num, sum = 0, temp, rem;
-        num = input.nextInt();
-        temp = num;
-        while (temp != 0) {
-            rem = temp % 10;
-            sum = sum * 10 + rem;
-            temp = temp / 10;
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int reverse = 0;
+
+        while (num != 0) {
+            int r = num % 10;         
+            reverse = reverse * 10 + r;
+            num = num / 10;            
         }
-        if (num==sum){
-            System.out.println(num+ " palindrom");
-        }
-        else{
-        System.out.println(num+"  not palindrom " );
+
+        System.out.println("Reversed number = " + reverse);
+
+        sc.close();
     }
-
-}
 }
